@@ -1,0 +1,49 @@
+@import '../../../styles.scss';
+
+.portfolio__container {
+    overflow: initial;
+}
+
+.portfolio__content {
+    padding: 0 1.5rem;
+    margin-bottom: $mb-0-75;
+}
+
+.portfolio__image {
+    width: 265px;
+    border-radius: .5rem;
+    justify-self: center;
+}
+
+.portfolio__title {
+    font-size: var(--h3-font-size);
+    margin-bottom: $mb-0-75;
+}
+
+.button .icon {
+    position: relative;
+    top: 1px;
+}
+
+.button:hover .icon {
+    transform: translateX(.25rem);
+}
+
+@media screen and (min-width: 568px) {
+    .portfolio__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        .portfolio__content {
+            margin-bottom: 1rem;
+            .portfolio__data {
+                text-align: center;
+            }
+            .portfolio__description {
+                margin: $mb-0-5 0;
+            }
+            .portfolio__button {
+                margin-bottom: $mb-0-5;
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@import '../../../styles.scss';
+
+.contact__container {
+    row-gap: 3rem;
+}
+
+.contact__information {
+    display: flex;
+    margin-bottom: $mb-2;
+    .icon {
+        height : 3rem;
+        width: 2.5rem;
+        margin-right: $mb-0-75;
+    }
+    .contact__title {
+        font-size: var(--h3-font-size);
+        font-weight: $font-medium;
+    }
+    .contact__subtitle {
+        font-size: var(--small-font-size);
+        color: $text-color-light;
+    }
+}
+
+@media screen and (min-width: 568px) {
+    .contact__container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

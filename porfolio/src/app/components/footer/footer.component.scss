@@ -1,0 +1,65 @@
+@import '../../../styles.scss';
+
+footer {
+    padding-top: 2rem;
+    background-color: var(--first-color);
+}
+
+.footer__container {
+    row-gap: 1.5rem;
+}
+
+.footer__bg {
+    background-color: var(--first-color);
+    padding: 2rem 0 3rem;
+}
+
+.footer__title {
+    font-size: var(--h1-font-size);
+    margin-bottom: $mb-0-25;
+}
+
+.footer__subtitle{
+    font-size: var(--small-font-size);
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.footer__link:hover{
+    color: $first-color-lighter;
+}
+
+.footer__copy {
+    font-size: var(--smaller-font-size);
+    text-align: center;
+    color: $text-color-light;
+    margin-top: $mb-1;
+}
+
+.footer__title,
+.footer__subtitle,
+.footer__link {
+    color: #fff;
+}
+
+@media screen and (min-width: 568px) {
+    .footer__container {
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+    }
+    .footer__copy{
+        grid-column: 1/3;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .footer__links {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}

@@ -1,0 +1,56 @@
+<header class="header" id="header">
+	<nav class="nav container">
+		<a href="#" class="nav__logo">Nick Nguyen</a>
+		<div class="nav__menu" id="nav-menu" [class]="isShow ? '' : 'close'">
+			<ul class="nav__list grid">
+				<li class="nav__item">
+					<a href="#home" class="nav__link" (click)="closeMenu()">
+						<img src="../assets/image/home-icon.png" alt="img">
+						Home
+					</a>
+				</li>
+				<li class="nav__item">
+					<a href="#about" class="nav__link" (click)="closeMenu()">
+						<img src="../assets/image/user-icon.png" alt="user">
+						About
+					</a>
+				</li>
+				<li class="nav__item">
+					<a href="#skill" class="nav__link" (click)="closeMenu()">
+						<img src="../assets/image/file-icon.png" alt="file">
+						Skills
+					</a>
+				</li>
+				<li class="nav__item">
+					<a href="#services" class="nav__link" (click)="closeMenu()">
+						<img src="../assets/image/brifcase-icon.png" alt="Service">
+						Services
+					</a>
+				</li>
+				<li class="nav__item">
+					<a href="#portfolio" class="nav__link" (click)="closeMenu()">
+						<img src="../assets/image/gallery-icon.png" alt="Porfolio">
+						Porfolio
+					</a>
+				</li>
+				<li class="nav__item">
+					<a href="#contact" class="nav__link" (click)="closeMenu()">
+						<img src="../assets/image/chat-icon.png" alt="Contact">
+						Contact
+					</a>
+				</li>
+			</ul>
+			<span class="close__icon" (click)="closeMenu()">x</span>
+		</div>
+
+		<div class="nav__btns">
+			<div class="theme-change-btn" (click)="toggleDarkTheme()">
+				<img *ngIf="darkTheme" src="../../../assets/image/sun-icon.png" alt="sun" class="icon">
+				<img *ngIf="!darkTheme" src="../../../assets/image/moon-icon.png" alt="moon" class="icon">
+			</div>
+			<div class="nav__btns nav__toggle">
+				<img src="../assets/image/app-icon.png" alt="app" (click)="openMenu()">
+			</div>
+		</div>
+	</nav>
+</header>

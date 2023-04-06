@@ -1,0 +1,28 @@
+<section class="section skills" id="skill">
+    <h2 class="section__title">Skills</h2>
+    <span class="section__subtitle">My technical level</span>
+
+    <div class="skills__container container grid">
+        <div class="skills__content" *ngFor="let skill of skills; let index = index" [class]="skill.show ? 'skill__open' : 'skill__close'">
+            <div class="skills__header" (click)="toggle(index)">
+                <img src={{skill.imageURL}} alt="icon" class="icon">
+                <div>
+                    <h1 class="skills__title">{{skill.title}}</h1>
+                    <span class="skills__subtitle">{{skill.time}}</span>
+                </div>
+                <span class="arrow-icon">></span>
+            </div>
+            <div class="skills__list grid">
+                <div class="skills__data" *ngFor="let category of skill.skillsList">
+                    <div class="skills__titles">
+                        <h3 class="skills__name">{{category.name}}</h3>
+                        <span class="skills__number">{{category.percentage}}%</span>
+                    </div>
+                    <div class="skills__bar">
+                        <span class="skills__percentage" [style.width.%]="category.percentage"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

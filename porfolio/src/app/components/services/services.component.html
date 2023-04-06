@@ -1,0 +1,32 @@
+<section class="services section" id="services">
+    <h2 class="section__title">Services</h2>
+    <span class="section__subtitle">What I offer</span>
+
+    <div class="services__container container grid">
+        <div class="service__content" *ngFor="let service of services; let index = index;">
+            <div>
+                <img [src]="service.imgUrl" alt="icon" class="icon">
+                <h3 class="services__title">{{service.title}}<br>{{service.strongTitle}}</h3>
+            </div>
+            <span class="button button--flex button--small button--link services__button" (click)="openModal(index)">
+                View More
+                <span class="icon">></span>
+            </span>
+            <div class="services__modal" [class]="service.show ? 'services__modal-open' : ''">
+                <div class="services__modal-content">
+                    <h4 class="services__modal-title">{{service.title}}<br>{{service.strongTitle}}</h4>
+                    <span class="services__modal-close" (click)="closeModal(index)">X</span>
+    
+                    <ul class="services__modal-services grid">
+                        <li class="services__modal-service" *ngFor="let detail of service.modal.detail">
+                            <img [src]="service.modal.imgUrl" alt="check" class="icon">
+                            <p>{{detail}}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+</section>
