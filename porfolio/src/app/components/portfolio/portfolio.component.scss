@@ -13,6 +13,11 @@
     width: 265px;
     border-radius: .5rem;
     justify-self: center;
+    transition: 0.25s;
+    cursor: pointer;
+    :hover{
+        transform: scale(1.2);
+    }
 }
 
 .portfolio__title {
